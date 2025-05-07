@@ -120,3 +120,28 @@ void main() {
   findPrimeNumber(n);
 }
 ```
+
+7- Write a function that takes a string and returns the number of vowels (a, e, i, o, u) in it. The function should ignore uppercase/lowercase differences.
+```
+int vowelsNumber(String num) {
+  String lowerText = num.toLowerCase(); //to make all text lower to ignore uppercase/lowercase differences.
+  int count = 0;
+
+  for(int i = 0;i < lowerText.length; i++){
+    if(lowerText[i] == 'a' ||
+       lowerText[i] == 'e' ||
+       lowerText[i] == 'i' ||
+       lowerText[i] == 'o' ||
+       lowerText[i] == 'u'){
+      count++;
+    }
+  }
+  return count;
+}
+
+void main(){
+  String text = "Hello World";
+  int result = vowelsNumber(text);
+  print(result);
+}
+```
