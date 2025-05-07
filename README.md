@@ -12,7 +12,23 @@ void main() {
   positiveIntegerNum(n);
 }
 ```
-2- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
+2- Write a function that takes a positive integer n and returns the sum of all numbers from 1 to n.
+```
+int positiveIntegerNum(int n) {
+  int sum = 0;
+  for (int i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+void main(){
+  int n = 5;
+  int result = positiveIntegerNum(n);
+  print(result);
+}
+```
+3- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
 ```
 int sumEvenNumbers(List <int> n) {
   int sum = 0;
