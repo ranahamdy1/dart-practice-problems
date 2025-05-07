@@ -1,6 +1,18 @@
 # Dart Practice Problems
+1- Write a function that takes a positive integer n and prints all the numbers from 1 to n, each on a separate line.
+```
+void positiveIntegerNum(int n) {
+  for (int i = 1; i <= n; i++){
+    print(i);
+  }
+}
 
-1- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
+void main() {
+  int n = 5;
+  positiveIntegerNum(n);
+}
+```
+2- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
 ```
 int sumEvenNumbers(List <int> n) {
   int sum = 0;
