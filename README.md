@@ -63,3 +63,31 @@ void main(){
   print(result);
 }
 ```
+5- Write a function that takes a string and returns the string reversed.
+```
+String reverseText(String text){
+  String reversedText = '';
+  for(int i = text.length - 1; i >= 0 ;i--){
+    reversedText += text[i];
+  }
+  return reversedText;
+}
+
+void main(){
+  String text ="Hello";
+  String result = reverseText(text);
+  print(result);
+}
+
+OR
+
+String reverseText(String text){
+  return text.split('').reversed.join();
+}
+
+void main(){
+  String text ="Hello";
+  String result = reverseText(text);
+  print(result);
+}
+```
