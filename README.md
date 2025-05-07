@@ -45,3 +45,21 @@ void main(){
   print(sumEvenNumbers(x)); 
 }
 ```
+4- Write a function that takes a list of integers and returns the maximum number in that list.
+```
+int findMaxNum(List<int> number) {
+  int max = number[0];
+  for(int i = 1; i < number.length; i++){
+    if(number[i] > max){
+      max = number[i];
+    }
+  }
+  return max;
+}
+
+void main(){
+  List<int> n = [0,2,7,4];
+  int result = findMaxNum(n);
+  print(result);
+}
+```
