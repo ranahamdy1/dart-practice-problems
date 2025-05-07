@@ -1,4 +1,5 @@
 # Dart Practice Problems
+
 1- Write a function that takes a positive integer n and prints all the numbers from 1 to n, each on a separate line.
 ```
 void positiveIntegerNum(int n) {
@@ -12,6 +13,7 @@ void main() {
   positiveIntegerNum(n);
 }
 ```
+
 2- Write a function that takes a positive integer n and returns the sum of all numbers from 1 to n.
 ```
 int positiveIntegerNum(int n) {
@@ -28,6 +30,7 @@ void main(){
   print(result);
 }
 ```
+
 3- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
 ```
 int sumEvenNumbers(List <int> n) {
@@ -45,6 +48,7 @@ void main(){
   print(sumEvenNumbers(x)); 
 }
 ```
+
 4- Write a function that takes a list of integers and returns the maximum number in that list.
 ```
 int findMaxNum(List<int> number) {
@@ -63,6 +67,7 @@ void main(){
   print(result);
 }
 ```
+
 5- Write a function that takes a string and returns the string reversed.
 ```
 String reverseText(String text){
@@ -91,6 +96,7 @@ void main(){
   print(result);
 }
 ```
+
 6- Write a function that checks if a number is a prime number. (A prime number is a number greater than 1 that has no positive divisors other than 1 and itself).
 ```
 void findPrimeNumber(int number) {
@@ -108,6 +114,30 @@ void findPrimeNumber(int number) {
 
 void main() {
   int n = 7;
+  findPrimeNumber(n);
+}
+```
+
+7- Write a function that checks if a number is a prime number. (A prime number is a number greater than 1 that has no positive divisors other than 1 and itself).
+```
+void findPrimeNumber(int number) {
+  if(number <=1){
+    print("false");
+    return; //stop function here
+  }
+
+  for(int i=2; i < number; i++){
+    if(number%i == 0){
+      print("false");
+      return; //stop function here => ex 9 when number = 3 it false then stop the function here
+    }
+  }
+
+  print("true"); // If the loop completes without finding a divisor, the number is prime
+}
+
+void main() {
+  int n = 9;
   findPrimeNumber(n);
 }
 ```
