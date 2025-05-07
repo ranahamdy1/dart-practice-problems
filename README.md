@@ -91,3 +91,23 @@ void main(){
   print(result);
 }
 ```
+6- Write a function that checks if a number is a prime number. (A prime number is a number greater than 1 that has no positive divisors other than 1 and itself).
+```
+void findPrimeNumber(int number) {
+  if(number <= 1){
+    print(false);
+  }
+  for(int i = 2; i< number; i++){
+    if(number % i == 0){
+      print("false"); // إذا العدد يقبل القسمة على أي رقم من 2 لحد العدد نفسه، يبقى مش أولي
+      return;
+    }
+  }
+  print("true");
+}
+
+void main() {
+  int n = 7;
+  findPrimeNumber(n);
+}
+```
