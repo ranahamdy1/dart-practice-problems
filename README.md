@@ -145,3 +145,33 @@ void main(){
   print(result);
 }
 ```
+
+8- Write a function that takes a list of integers and returns the number that appears most frequently in the list. If multiple numbers appear the same number of times, return any one of them.
+```
+int findMostFrequentNumber(List<int> numbers){
+  Map<int, int> frequencyMap = {}; // نستخدم map علشان نحسب كم مرة كل رقم اتكرر
+  int mostFrequentNumber = numbers[0];
+  int count = 1;
+  for(int number in numbers){
+    if(frequencyMap.containsKey(number)) {
+      frequencyMap[number] = frequencyMap[number]! + 1;
+    }else {
+      frequencyMap[number] = 1;
+    }
+  }
+
+  frequencyMap.forEach((key, value) {
+    if(value > count){
+      count = value;
+      mostFrequentNumber = key;
+    }
+  });
+
+  return mostFrequentNumber;
+}
+
+void main(){
+  List<int> n = [1, 2, 3, 4, 5, 1, 2, 3, 1];
+  print(findMostFrequentNumber(n));
+}
+```
