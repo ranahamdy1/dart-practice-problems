@@ -175,3 +175,33 @@ void main(){
   print(findMostFrequentNumber(n));
 }
 ```
+
+9- Write a function that takes a list of integers and returns how many numbers are repeated (appeared more than once) in that list.
+```
+int repeatedNumber(List<int> numbers) {
+  Map<int, int> frequencyMap = {};
+  for(int number in numbers){
+    if(frequencyMap.containsKey(number)){
+      frequencyMap[number] = frequencyMap[number]! + 1;
+    } else {
+      frequencyMap[number] = 1;
+    }
+  }
+
+  int repeatedCount = 0;
+  for (int value in frequencyMap.values) {
+    if (value > 1) {
+      repeatedCount++;
+    }
+  }
+
+  return repeatedCount;
+}
+
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5, 1, 2, 3];
+  int result = repeatedNumber(numbers);
+  print(result);
+}
+```
+
