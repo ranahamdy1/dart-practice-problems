@@ -268,3 +268,16 @@ void main(){
   print(commonInTwoList(list1, list2));
 }
 ```
+
+13- Write a function that removes all duplicate values from a list and returns a new list with unique values only.
+```
+List<int> removeDuplicateValues(List<int> list) {
+  List<int> setToList = list.toSet().toList();
+  return setToList;
+}
+void main(){
+  List<int> list = [1,2,3,4,5,6,7,8,9,10,1,2,3,4,5];
+  List<int> result = removeDuplicateValues(list);
+  print(result);
+}
+```
