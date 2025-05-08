@@ -211,3 +211,34 @@ void main() {
 }
 ```
 
+10- Write a function that takes a list of integers and returns a list of numbers that appear more than once.
+```
+List<int> mostRepeatedNumbers(List<int> numbers) {
+  Map<int, int> frequency = {};
+
+  // احسب التكرارات
+  for (int number in numbers) {
+    if (frequency.containsKey(number)) {
+      frequency[number] = frequency[number]! + 1;
+    } else {
+      frequency[number] = 1;
+    }
+  }
+
+  // رجّع الأرقام اللي اتكررت أكتر من مرة
+  List<int> repeated = [];
+  for (int key in frequency.keys) {
+    if (frequency[key]! > 1) {
+      repeated.add(key);
+    }
+  }
+
+  return repeated;
+}
+
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 1, 10];
+  print(mostRepeatedNumbers(numbers)); // [1, 8, 9]
+}
+
+```
