@@ -252,3 +252,19 @@ void main(){
   print(areListEqual(list1, list2));
 }
 ```
+
+12- Write a function that returns the common elements between two lists (without duplicates).
+```
+Set<int> commonInTwoList(List<int> list1, List<int> list2){
+  Set<int> set1 = list1.toSet();
+  Set<int> set2 = list2.toSet();
+
+  //intersection() بتجيب العناصر المشتركة فقط بين set1 و set2.
+  return set1.intersection(set2);
+}
+void main(){
+  List<int> list1 = [1,2,3,4,5];
+  List<int> list2 = [1,2,3,4,5];
+  print(commonInTwoList(list1, list2));
+}
+```
