@@ -150,8 +150,8 @@ void main(){
 ```
 int findMostFrequentNumber(List<int> numbers){
   Map<int, int> frequencyMap = {}; // نستخدم map علشان نحسب كم مرة كل رقم اتكرر
-  int mostFrequentNumber = numbers[0];
-  int count = 1;
+
+  //  نحسب تكرار كل رقم ونخزن النتيجة في الـ Map
   for(int number in numbers){
     if(frequencyMap.containsKey(number)) {
       frequencyMap[number] = frequencyMap[number]! + 1;
@@ -160,6 +160,9 @@ int findMostFrequentNumber(List<int> numbers){
     }
   }
 
+  //نحدد الرقم اللي تكرر أكتر
+  int mostFrequentNumber = numbers[0];
+  int count = 1;
   frequencyMap.forEach((key, value) {
     if(value > count){
       count = value;
@@ -180,6 +183,8 @@ void main(){
 ```
 int repeatedNumber(List<int> numbers) {
   Map<int, int> frequencyMap = {};
+
+  //  نحسب تكرار كل رقم ونخزن النتيجة في الـ Map
   for(int number in numbers){
     if(frequencyMap.containsKey(number)){
       frequencyMap[number] = frequencyMap[number]! + 1;
@@ -188,6 +193,7 @@ int repeatedNumber(List<int> numbers) {
     }
   }
 
+  //  نحسب عدد الأرقام اللي اتكررت أكتر من مرة
   int repeatedCount = 0;
   for (int value in frequencyMap.values) {
     if (value > 1) {
