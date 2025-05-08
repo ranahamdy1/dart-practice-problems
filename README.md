@@ -237,3 +237,18 @@ void main(){
   print(mostRepeatedNumbers(numbers));
 }
 ```
+
+11- Write a function that checks whether two lists contain the same elements regardless of order and duplicates.
+```
+bool areListEqual(List<int> list1, List<int> list2){
+  Set set1 = list1.toSet();
+  Set set2 = list2.toSet();
+
+  return set1.containsAll(set2) && set2.containsAll(set1);
+}
+void main(){
+  List<int> list1 = [1,2,3,4,5];
+  List<int> list2 = [1,2,3,4,5];
+  print(areListEqual(list1, list2));
+}
+```
