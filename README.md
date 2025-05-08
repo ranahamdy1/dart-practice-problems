@@ -281,3 +281,25 @@ void main(){
   print(result);
 }
 ```
+
+14- Write a function that takes a list of integers and returns the first number that is repeated.
+```
+int firstRepeatedNumber(List<int> numbers){
+  Map<int,int> map = {};
+  for(int number in numbers){
+    if(map.containsKey(number)){
+      // لو موجود يبقى ده أول رقم اتكرر نرجّعه فورًا.
+      return number;
+    }else{
+      //لو مش موجود يبقى أول مرة نشوفه فبنضيف الرقم في الماب علشان نفتكره لو شوفناه تاني
+      map[number] = 1;
+    }
+  }
+  return -1;
+}
+
+void main(){
+  List<int> numbers = [1,2,3,4,5,6,7,8,9,10,4,6];
+  print(firstRepeatedNumber(numbers));
+}
+```
