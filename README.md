@@ -435,3 +435,21 @@ void main(){
   print(reverseWord(word));
 }
 ```
+
+22- Write a function that finds the sum of all even numbers in a list.
+```
+int sumEventNumbers(List<int> numbers) {
+  int sum = 0;
+  for (int number in numbers){
+    if(number % 2 == 0){
+      sum += number;
+    }
+  }
+  return sum;
+}
+
+void main(){
+  List<int> numbers = [1, 2, 3, 4, 5, 6];
+  print(sumEventNumbers(numbers));
+}
+```
