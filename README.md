@@ -469,3 +469,22 @@ void main(){
   print("The factorial of $number is ${factorial(number)}");
 }
 ```
+
+24- Write a function to count how many times a specific number appears in a list.
+```
+int numberAppear (List<int> list, int number) {
+  int count = 0;
+  for(int i =0; i<list.length; i++){
+    if(list[i] == number){
+      count++;
+    }
+  }
+  return count;
+}
+
+void main() {
+  List<int> list = [1,2,3,4,5,6,7,8,9,5,10];
+  int number = 5;
+  print(numberAppear(list, number));
+}
+```
