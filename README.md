@@ -303,3 +303,27 @@ void main(){
   print(firstRepeatedNumber(numbers));
 }
 ```
+
+15- Write a function that returns the only number in the list that appears exactly once.(Assume that at most one such number exists.) If no such number exists, return -1.
+```
+int repeatOnlyOne(List<int> numbers){
+  Map<int, int> frequency = {};
+
+  for (int number in numbers) {
+    frequency[number] = (frequency[number] ?? 0) + 1;
+  }
+
+  for (int number in numbers) {
+    if (frequency[number] == 1) {
+      return number;
+    }
+  }
+
+    return -1;
+}
+
+void main(){
+  List<int> numbers = [4, 1, 2, 2];
+  print(repeatOnlyOne(numbers));
+}
+```
