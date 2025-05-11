@@ -387,3 +387,21 @@ void main(){
   print(sameForwardAndBackwards(list));
 }
 ```
+
+19- Write a function that checks if a number is a perfect square.
+```
+import 'dart:math';
+bool isPerfectSquare(int number){
+  if(number < 0){
+    return false;
+  }
+
+  int sqrtNum = sqrt(number).toInt(); // حساب الجذر التربيعي
+  return sqrtNum * sqrtNum == number;
+}
+
+void main() {
+  print(isPerfectSquare(16)); //true
+  print(isPerfectSquare(22)); //false
+}
+```
