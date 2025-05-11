@@ -423,3 +423,15 @@ void main(){
   print(findLongestWord(words));
 }
 ```
+
+21- Write a function that reverses a string.
+```
+String reverseWord(String word) {
+  return word.split('').reversed.join('');
+}
+
+void main(){
+  String word = "Hello";
+  print(reverseWord(word));
+}
+```
