@@ -351,3 +351,18 @@ void main(){
   print(repeatOnlyOne(numbers));
 }
 ```
+
+17- Write a function that takes a list of integers from 1 to n with one number missing, and returns the missing number.
+```
+int findMissingNumber(List<int> numbers) {
+  int listTotalNumber = numbers.length +1;
+  int totalSum = listTotalNumber * (listTotalNumber + 1) ~/ 2; // مجموع الأرقام من 1 إلى n( n * (n + 1) ~/ 2)
+  int listSum = numbers.reduce((a, b) => a + b); // مجموع الأرقام الموجودة
+  int result = totalSum - listSum;
+  return result;
+}
+void main() {
+  List<int> numbers = [1, 2, 3, 5];
+  print(findMissingNumber(numbers));
+}
+```
