@@ -504,3 +504,20 @@ void main() {
   print(mergedList);
 }
 ```
+
+26- Write a function that removes all odd numbers from a list.
+```
+List<int> removeOddNumbers(List<int> numbers) {
+  List<int> numbersList = [];
+  for(int number in numbers) {
+    if(number%2 ==0){
+      numbersList.add(number);
+    }
+  }
+  return numbersList;
+}
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  print(removeOddNumbers(numbers));
+}
+```
