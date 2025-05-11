@@ -405,3 +405,21 @@ void main() {
   print(isPerfectSquare(22)); //false
 }
 ```
+
+20- Write a function to find the longest word in a list of strings.
+```
+String findLongestWord(List<String> words) {
+  String longestWord = '';
+  for (String word in words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+
+void main(){
+  List<String> words = ["apple", "banana", "cherry", "watermelon"];
+  print(findLongestWord(words));
+}
+```
