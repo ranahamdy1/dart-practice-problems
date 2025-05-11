@@ -521,3 +521,25 @@ void main() {
   print(removeOddNumbers(numbers));
 }
 ```
+
+27- Write a function that returns the maximum difference between any two elements in a list of integers.
+```
+int maxDifference(List<int> numbers) {
+  int maxNum = numbers[0];
+  int minNum = numbers[0];
+  for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] > maxNum) {
+      maxNum = numbers[i];
+    }
+    if (numbers[i] < minNum) {
+      minNum = numbers[i];
+    }
+  }
+  return maxNum - minNum;
+}
+
+void main() {
+  List<int> numbers = [3, 5, 1, 9, 2];
+  print(maxDifference(numbers));
+}
+```
