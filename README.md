@@ -366,3 +366,24 @@ void main() {
   print(findMissingNumber(numbers));
 }
 ```
+
+18- Write a function that checks if a list of integers is the same forwards and backwards.
+```
+bool sameForwardAndBackwards(List<int> numbers) {
+  int firstNumber = 0;
+  int lastNumber = numbers.length - 1;
+  while(firstNumber<lastNumber){
+    if(numbers[firstNumber] != numbers[lastNumber]){
+      return false;
+    }
+    firstNumber++;
+    lastNumber--;
+  }
+  return true;
+}
+
+void main(){
+  List<int> list = [1,2,3,2,1];
+  print(sameForwardAndBackwards(list));
+}
+```
