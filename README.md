@@ -327,3 +327,27 @@ void main(){
   print(repeatOnlyOne(numbers));
 }
 ```
+
+16- Write a function that returns the list of number that appears exactly once.
+```
+List<int> repeatOnlyOne(List<int> numbers){
+  Map<int, int> frequency = {};
+
+  for (int number in numbers) {
+    frequency[number] = (frequency[number] ?? 0) + 1;
+  }
+
+  List<int> repeatedList =[];
+  for (int number in frequency.keys) {
+    if (frequency[number] == 1) {
+      repeatedList.add(number);
+    }
+  }
+  return repeatedList;
+}
+
+void main(){
+  List<int> numbers = [4, 1, 2, 2];
+  print(repeatOnlyOne(numbers));
+}
+```
