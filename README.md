@@ -488,3 +488,19 @@ void main() {
   print(numberAppear(list, number));
 }
 ```
+
+25- Write a function to merge two lists into a single list.
+```
+List<int> mergeTwoLists(List<int> list1, List<int>list2) {
+  List<int> mergedList = [];
+  mergedList.addAll(list1);
+  mergedList.addAll(list2);
+  return mergedList;
+}
+void main() {
+  List<int> list1 = [1, 2, 3];
+  List<int> list2 = [4, 5, 6];
+  List<int> mergedList = mergeTwoLists(list1, list2);
+  print(mergedList);
+}
+```
