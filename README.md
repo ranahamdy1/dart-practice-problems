@@ -632,7 +632,7 @@ void main() {
 ```
 
 31- Write a function that returns the top 2 most frequent numbers in a list.
-```
+```dart
 List<int> topTwoFrequent(List<int> numbers) {
   Map<int, int> freq = {};
 
