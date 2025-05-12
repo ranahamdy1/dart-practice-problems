@@ -555,6 +555,28 @@ void main() {
 List<int> numbers = [1, 2, 3, 4, 5];
   print(secondLargestNumber(numbers));
 }
+
+OR
+
+int? secondLargestNumber(List<int> numbers) {
+  int maxNumber = numbers[0];
+  int? secMaxNumber;
+
+  for(int number in numbers) {
+    if (number > maxNumber) {
+      secMaxNumber = maxNumber;
+      maxNumber = number;
+    }else if ((secMaxNumber == null || number > secMaxNumber) && number != maxNumber) {
+      secMaxNumber = number;
+    }
+  }
+  return secMaxNumber;
+}
+
+void main() {
+  List<int> numbers = [4, 1, 2, 6, 9, 5];
+  print(secondLargestNumber(numbers));
+}
 ```
 
 29- Write a function that finds all duplicates in a list.
