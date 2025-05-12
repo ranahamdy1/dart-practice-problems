@@ -558,7 +558,7 @@ List<int> numbers = [1, 2, 3, 4, 5];
 ```
 
 29- Write a function that finds all duplicates in a list.
-```
+```dart
 List<int> findDuplicated(List<int> numbers) {
   Map<int, int> countMap = {};
 
