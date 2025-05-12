@@ -556,3 +556,31 @@ List<int> numbers = [1, 2, 3, 4, 5];
   print(secondLargestNumber(numbers));
 }
 ```
+
+29- Write a function that finds all duplicates in a list.
+```
+List<int> findDuplicated(List<int> numbers) {
+  Map<int, int> countMap = {};
+
+  for (int number in numbers) {
+    if (countMap.containsKey(number)) {
+      countMap[number] = countMap[number]! + 1;
+    } else {
+      countMap[number] = 1;
+    }
+  }
+
+  List<int> duplicates = [];
+  for (var entry in countMap.entries) {
+    if (entry.value > 1) {
+      duplicates.add(entry.key);
+    }
+  }
+  return duplicates;
+}
+
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5, 1, 2, 3];
+  print(findDuplicated(numbers));
+}
+```
