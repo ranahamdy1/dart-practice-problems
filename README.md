@@ -606,3 +606,27 @@ void main() {
   print(findDuplicated(numbers));
 }
 ```
+
+30- Write a function that returns all numbers in a list that are greater than the average of the list.
+```
+List<int> graterThanAverage(List<int> numbers) {
+  int average;
+  int sum = 0;
+  for (int number in numbers) {
+    sum += number;
+  }
+  average = sum ~/ numbers.length;
+  List<int> result = [];
+  for (int number in numbers) {
+    if (number > average) {
+      result.add(number);
+    }
+  }
+  return result;
+}
+
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+  print(graterThanAverage(numbers));
+}
+```
