@@ -608,7 +608,7 @@ void main() {
 ```
 
 30- Write a function that returns all numbers in a list that are greater than the average of the list.
-```
+```dart
 List<int> graterThanAverage(List<int> numbers) {
   int average;
   int sum = 0;
