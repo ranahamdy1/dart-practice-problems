@@ -543,3 +543,16 @@ void main() {
   print(maxDifference(numbers));
 }
 ```
+
+28- Write a function that returns the second largest number in a list.
+```
+int secondLargestNumber(List<int> number) {
+  number.sort();
+  return number[number.length - 2];
+}
+
+void main() {
+List<int> numbers = [1, 2, 3, 4, 5];
+  print(secondLargestNumber(numbers));
+}
+```
