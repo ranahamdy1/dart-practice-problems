@@ -609,7 +609,7 @@ void main() {
 
 30- Write a function that returns all numbers in a list that are greater than the average of the list.
 ```dart
-List<int> graterThanAverage(List<int> numbers) {
+List<int> greaterThanAverage(List<int> numbers) {
   int average;
   int sum = 0;
   for (int number in numbers) {
@@ -627,6 +627,50 @@ List<int> graterThanAverage(List<int> numbers) {
 
 void main() {
   List<int> numbers = [1, 2, 3, 4, 5];
-  print(graterThanAverage(numbers));
+  print(greaterThanAverage(numbers));
+}
+```
+
+31- Write a function that returns the top 2 most frequent numbers in a list.
+```
+List<int> topTwoFrequent(List<int> numbers) {
+  Map<int, int> freq = {};
+
+  // نحسب التكرارات
+  for (int number in numbers) {
+    if (freq.containsKey(number)) {
+      freq[number] = freq[number]! + 1;
+    } else {
+      freq[number] = 1;
+    }
+  }
+
+  int? firstMax;
+  int? secondMax;
+  int firstCount = 0;
+  int secondCount = 0;
+
+  for (var entry in freq.entries) {
+    if (entry.value > firstCount) {
+      secondMax = firstMax;
+      secondCount = firstCount;
+      firstMax = entry.key;
+      firstCount = entry.value;
+    } else if (entry.value > secondCount) {
+      secondMax = entry.key;
+      secondCount = entry.value;
+    }
+  }
+
+  // نرجّعهم في List
+  List<int> result = [];
+  if (firstMax != null) result.add(firstMax);
+  if (secondMax != null) result.add(secondMax);
+  return result;
+}
+
+void main() {
+  List<int> numbers = [4, 1, 2, 4, 2, 2, 3, 1, 4];
+  print(topTwoFrequent(numbers));
 }
 ```
