@@ -784,3 +784,16 @@ void main() {
   timeNumberAppear(numberList);
 }
 ```
+
+37- Given a list of integers, sort the list in ascending order and return the result.
+```dart
+List<int> sortedList(List<int> list) {
+  list.sort();
+  return list;
+}
+
+void main() {
+  List<int> list = [1,12,3,14,5];
+  print(sortedList(list));
+}
+```
