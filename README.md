@@ -763,3 +763,24 @@ void main(){
   maxAndMinNumber(number, list);
 }
 ```
+
+36- You're given a list of integers. Write a function that counts how many times each number appears.
+```dart
+void timeNumberAppear(List<int> numbers) {
+  Map<int,int> frequency ={};
+
+  for (int number in numbers) {
+    if (frequency.containsKey(number)) {
+      frequency[number] = frequency[number]! + 1;
+    } else {
+      frequency[number] = 1;
+    }
+  }
+  print(frequency);
+}
+
+void main() {
+  List <int> numberList =[1,2,3,2,3];
+  timeNumberAppear(numberList);
+}
+```
