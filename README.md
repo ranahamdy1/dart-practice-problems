@@ -1,6 +1,27 @@
 # Dart Practice Problems
 
-1- Write a function that takes a positive integer n and prints all the numbers from 1 to n, each on a separate line.
+1- Given a name S. Print "Welcome, (name)"
+```dart
+import 'dart:io';
+void main(){
+  print("Enter your name");
+  String name = stdin.readLineSync()!;
+  print("Welcome, $name");
+}
+```
+
+2- You are given a person's systolic blood pressure,A ,and diastolic blood pressure,B, Find the mean arterial pressure,C ,which we define as follows: C = ((A−B)/3)+B
+```dart
+import 'dart:io';
+void main() {
+  int A = int.parse(stdin.readLineSync()!);
+  int B = int.parse(stdin.readLineSync()!);
+  double C = ((A - B)/3)+B;
+  print(C);
+}
+```
+
+3- Write a function that takes a positive integer n and prints all the numbers from 1 to n, each on a separate line.
 ```dart
 void positiveIntegerNum(int n) {
   for (int i = 1; i <= n; i++){
@@ -14,7 +35,7 @@ void main() {
 }
 ```
 
-2- Write a function that takes a positive integer n and returns the sum of all numbers from 1 to n.
+4- Write a function that takes a positive integer n and returns the sum of all numbers from 1 to n.
 ```dart
 int positiveIntegerNum(int n) {
   int sum = 0;
@@ -31,7 +52,7 @@ void main(){
 }
 ```
 
-3- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
+5- Write a function that takes a list of integers (List<int>) and returns the sum of the even numbers only.
 ```dart
 int sumEvenNumbers(List <int> n) {
   int sum = 0;
@@ -49,7 +70,7 @@ void main(){
 }
 ```
 
-4- Write a function that takes a list of integers and returns the maximum number in that list.
+6- Write a function that takes a list of integers and returns the maximum number in that list.
 ```dart
 int findMaxNum(List<int> number) {
   int max = number[0];
@@ -68,7 +89,7 @@ void main(){
 }
 ```
 
-5- Write a function that takes a string and returns the string reversed.
+7- Write a function that takes a string and returns the string reversed.
 ```dart
 String reverseText(String text){
   String reversedText = '';
@@ -97,7 +118,7 @@ void main(){
 }
 ```
 
-6- Write a function that checks if a number is a prime number. (A prime number is a number greater than 1 that has no positive divisors other than 1 and itself).
+8- Write a function that checks if a number is a prime number. (A prime number is a number greater than 1 that has no positive divisors other than 1 and itself).
 ```dart
 void findPrimeNumber(int number) {
   if(number <=1){
@@ -121,7 +142,7 @@ void main() {
 }
 ```
 
-7- Write a function that takes a string and returns the number of vowels (a, e, i, o, u) in it. The function should ignore uppercase/lowercase differences.
+9- Write a function that takes a string and returns the number of vowels (a, e, i, o, u) in it. The function should ignore uppercase/lowercase differences.
 ```dart
 int vowelsNumber(String num) {
   String lowerText = num.toLowerCase(); //to make all text lower to ignore uppercase/lowercase differences.
@@ -146,7 +167,7 @@ void main(){
 }
 ```
 
-8- Write a function that takes a list of integers and returns the number that appears most frequently in the list. If multiple numbers appear the same number of times, return any one of them.
+10- Write a function that takes a list of integers and returns the number that appears most frequently in the list. If multiple numbers appear the same number of times, return any one of them.
 ```dart
 int findMostFrequentNumber(List<int> numbers){
   Map<int, int> frequencyMap = {}; // نستخدم map علشان نحسب كم مرة كل رقم اتكرر
@@ -179,7 +200,7 @@ void main(){
 }
 ```
 
-9- Write a function that takes a list of integers and returns how many numbers are repeated (appeared more than once) in that list.
+11- Write a function that takes a list of integers and returns how many numbers are repeated (appeared more than once) in that list.
 ```dart
 int repeatedNumber(List<int> numbers) {
   Map<int, int> frequencyMap = {};
@@ -211,7 +232,7 @@ void main() {
 }
 ```
 
-10- Write a function that takes a list of integers and returns a list of numbers that appear more than once.
+12- Write a function that takes a list of integers and returns a list of numbers that appear more than once.
 ```dart
 List<int> mostRepeatedNumbers(List<int> numbers){
   Map<int, int> frequency = {};
@@ -238,7 +259,7 @@ void main(){
 }
 ```
 
-11- Write a function that checks whether two lists contain the same elements regardless of order and duplicates.
+13- Write a function that checks whether two lists contain the same elements regardless of order and duplicates.
 ```dart
 bool areListEqual(List<int> list1, List<int> list2){
   Set set1 = list1.toSet();
@@ -253,7 +274,7 @@ void main(){
 }
 ```
 
-12- Write a function that returns the common elements between two lists (without duplicates).
+14- Write a function that returns the common elements between two lists (without duplicates).
 ```dart
 Set<int> commonInTwoList(List<int> list1, List<int> list2){
   Set<int> set1 = list1.toSet();
@@ -269,7 +290,7 @@ void main(){
 }
 ```
 
-13- Write a function that removes all duplicate values from a list and returns a new list with unique values only.
+15- Write a function that removes all duplicate values from a list and returns a new list with unique values only.
 ```dart
 List<int> removeDuplicateValues(List<int> list) {
   List<int> setToList = list.toSet().toList();
@@ -282,7 +303,7 @@ void main(){
 }
 ```
 
-14- Write a function that takes a list of integers and returns the first number that is repeated.
+16- Write a function that takes a list of integers and returns the first number that is repeated.
 ```dart
 int firstRepeatedNumber(List<int> numbers){
   Map<int,int> map = {};
@@ -304,7 +325,7 @@ void main(){
 }
 ```
 
-15- Write a function that returns the only number in the list that appears exactly once.(Assume that at most one such number exists.) If no such number exists, return -1.
+17- Write a function that returns the only number in the list that appears exactly once.(Assume that at most one such number exists.) If no such number exists, return -1.
 ```dart
 int repeatOnlyOne(List<int> numbers){
   Map<int, int> frequency = {};
@@ -328,7 +349,7 @@ void main(){
 }
 ```
 
-16- Write a function that returns the list of number that appears exactly once.
+18- Write a function that returns the list of number that appears exactly once.
 ```dart
 List<int> repeatOnlyOne(List<int> numbers){
   Map<int, int> frequency = {};
@@ -352,7 +373,7 @@ void main(){
 }
 ```
 
-17- Write a function that takes a list of integers from 1 to n with one number missing, and returns the missing number.
+19- Write a function that takes a list of integers from 1 to n with one number missing, and returns the missing number.
 ```dart
 int findMissingNumber(List<int> numbers) {
   int listTotalNumber = numbers.length +1;
@@ -367,7 +388,7 @@ void main() {
 }
 ```
 
-18- Write a function that checks if a list of integers is the same forwards and backwards.
+20- Write a function that checks if a list of integers is the same forwards and backwards.
 ```dart
 bool sameForwardAndBackwards(List<int> numbers) {
   int firstNumber = 0;
@@ -388,7 +409,7 @@ void main(){
 }
 ```
 
-19- Write a function that checks if a number is a perfect square.
+21- Write a function that checks if a number is a perfect square.
 ```dart
 import 'dart:math';
 bool isPerfectSquare(int number){
@@ -406,7 +427,7 @@ void main() {
 }
 ```
 
-20- Write a function to find the longest word in a list of strings.
+22- Write a function to find the longest word in a list of strings.
 ```dart
 String findLongestWord(List<String> words) {
   String longestWord = '';
@@ -424,7 +445,7 @@ void main(){
 }
 ```
 
-21- Write a function that reverses a string.
+23- Write a function that reverses a string.
 ```dart
 String reverseWord(String word) {
   return word.split('').reversed.join('');
@@ -436,7 +457,7 @@ void main(){
 }
 ```
 
-22- Write a function that finds the sum of all even numbers in a list.
+24- Write a function that finds the sum of all even numbers in a list.
 ```dart
 int sumEventNumbers(List<int> numbers) {
   int sum = 0;
@@ -454,7 +475,7 @@ void main(){
 }
 ```
 
-23- Write a function to calculate the factorial of a number.
+25- Write a function to calculate the factorial of a number.
 ```dart
 int factorial(int number) {
   if(number == 0 || number == 1){
@@ -470,7 +491,7 @@ void main(){
 }
 ```
 
-24- Write a function to count how many times a specific number appears in a list.
+26- Write a function to count how many times a specific number appears in a list.
 ```dart
 int numberAppear (List<int> list, int number) {
   int count = 0;
@@ -489,7 +510,7 @@ void main() {
 }
 ```
 
-25- Write a function to merge two lists into a single list.
+27- Write a function to merge two lists into a single list.
 ```dart
 List<int> mergeTwoLists(List<int> list1, List<int>list2) {
   List<int> mergedList = [];
@@ -505,7 +526,7 @@ void main() {
 }
 ```
 
-26- Write a function that removes all odd numbers from a list.
+28- Write a function that removes all odd numbers from a list.
 ```dart
 List<int> removeOddNumbers(List<int> numbers) {
   List<int> numbersList = [];
@@ -522,7 +543,7 @@ void main() {
 }
 ```
 
-27- Write a function that returns the maximum difference between any two elements in a list of integers.
+29- Write a function that returns the maximum difference between any two elements in a list of integers.
 ```dart
 int maxDifference(List<int> numbers) {
   int maxNum = numbers[0];
@@ -544,7 +565,7 @@ void main() {
 }
 ```
 
-28- Write a function that returns the second largest number in a list.
+30- Write a function that returns the second largest number in a list.
 ```dart
 int secondLargestNumber(List<int> number) {
   number.sort();
@@ -579,7 +600,7 @@ void main() {
 }
 ```
 
-29- Write a function that finds all duplicates in a list.
+31- Write a function that finds all duplicates in a list.
 ```dart
 List<int> findDuplicated(List<int> numbers) {
   Map<int, int> countMap = {};
@@ -607,7 +628,7 @@ void main() {
 }
 ```
 
-30- Write a function that returns all numbers in a list that are greater than the average of the list.
+32- Write a function that returns all numbers in a list that are greater than the average of the list.
 ```dart
 List<int> greaterThanAverage(List<int> numbers) {
   int average;
@@ -631,7 +652,7 @@ void main() {
 }
 ```
 
-31- Write a function that returns the top 2 most frequent numbers in a list.
+33- Write a function that returns the top 2 most frequent numbers in a list.
 ```dart
 List<int> topTwoFrequent(List<int> numbers) {
   Map<int, int> freq = {};
@@ -675,17 +696,7 @@ void main() {
 }
 ```
 
-32- Given a name S. Print "Welcome, (name)"
-```dart
-import 'dart:io';
-void main(){
-  print("Enter your name");
-  String name = stdin.readLineSync()!;
-  print("Welcome, $name");
-}
-```
-
-33- Given a number N. Print a diamond that has 2N rows.
+34- Given a number N. Print a diamond that has 2N rows.
 ```
     *
    ***
@@ -725,16 +736,5 @@ void diamond(int n){
 void main() {
   int number = 5;
   diamond(number);
-}
-```
-
-34- You are given a person's systolic blood pressure,A ,and diastolic blood pressure,B, Find the mean arterial pressure,C ,which we define as follows: C = ((A−B)/3)+B
-```dart
-import 'dart:io';
-void main() {
-  int A = int.parse(stdin.readLineSync()!);
-  int B = int.parse(stdin.readLineSync()!);
-  double C = ((A - B)/3)+B;
-  print(C);
 }
 ```
