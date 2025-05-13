@@ -686,6 +686,18 @@ void main(){
 ```
 
 33- Given a number N. Print a diamond that has 2N rows.
+```
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+```
 ```dart
 void diamond(int n){
   // Upper part (including middle)
@@ -696,13 +708,17 @@ void diamond(int n){
     //2*2 -1 = 4-1 = 3
     //2*3 -1 = 6-1 = 5
     //2*4 -1 = 8-1 = 7
-    //2*5 -1 = 10-1 = 9
+    //2*5 -1 = 10-1 = 9 (middle)
     print(spaces + stars);
   }
   // Lower part
   for(int i=n-1; i >= 1; i--){
     String spaces = ' ' * (n - i);
     String stars = '*' * (2 * i - 1);
+    //2*4-1=7
+    //2*3-1=5
+    //2*2-1=3
+    //2*1-1=1
     print(spaces + stars);
   }
 }
