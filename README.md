@@ -824,3 +824,19 @@ void main() {
   print(isNumInList(list, number));
 }
 ```
+
+39- Write a recursive function to calculate the factorial of a number n.
+```dart
+num factorial (int number) {
+  if(number == 0 || number == 1){
+    return 1;
+  }else{
+    return number * factorial(number-1);
+  }
+}
+
+void main() {
+  int number = 5;
+  print(factorial(number));
+}
+```
