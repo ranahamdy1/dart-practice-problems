@@ -727,3 +727,14 @@ void main() {
   diamond(number);
 }
 ```
+
+34- You are given a person's systolic blood pressure,A ,and diastolic blood pressure,B, Find the mean arterial pressure,C ,which we define as follows: C = ((A−B)/3)+B
+```dart
+import 'dart:io';
+void main() {
+  int A = int.parse(stdin.readLineSync()!);
+  int B = int.parse(stdin.readLineSync()!);
+  double C = ((A - B)/3)+B;
+  print(C);
+}
+```
