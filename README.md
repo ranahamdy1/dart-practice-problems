@@ -797,3 +797,30 @@ void main() {
   print(sortedList(list));
 }
 ```
+
+38- Given a sorted list of integers and a target number, return true if the number exists in the list, otherwise return false. (Use binary search logic (don't use .contains() or .indexOf())).
+```dart
+bool isNumInList(List<int>list, int number) {
+  int left = 0;
+  int right = list.length - 1;
+
+  while(left <= right) {
+    int mid = (left + right) ~/ 2;
+
+    if (list[mid] == number) {
+      return true;
+    } else if(list[mid] <number){
+      left = mid + 1;
+    }else{
+      right = mid - 1;
+    }
+  }
+  return false;
+}
+
+void main() {
+  List<int> list = [1,4,6,8];
+  int number = 4;
+  print(isNumInList(list, number));
+}
+```
