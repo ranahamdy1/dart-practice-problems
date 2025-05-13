@@ -738,3 +738,28 @@ void main() {
   diamond(number);
 }
 ```
+
+35- Given a number N and an array A of N numbers. print the sum of maximum 4 number and minimum 4 number
+```dart
+void maxAndMinNumber(int N, List<int> A) {
+  if (N < 4) {
+    print('The list must contain at least 4 numbers.');
+    return;
+  }
+  A.sort(); //يقوم بترتيب القائمة A من الأصغر إلى الأكبر
+  int minSum = A.sublist(0, 4).reduce((a, b) => a + b);     // مجموع أصغر 4 أرقام
+  //A.sublist(0, 4) → يأخذ أول 4 عناصر من القائمة
+  // .reduce((a, b) => a + b) → يجمعهم مع بعض
+  int maxSum = A.sublist(N - 4, N).reduce((a, b) => a + b); // مجموع أكبر 4 أرقام
+  //A.sublist(N - 4, N) → يأخذ آخر 4 عناصر
+  // .reduce((a, b) => a + b) → يجمعهم
+  print('Sum of smallest 4 numbers: $minSum');
+  print('Sum of largest 4 numbers: $maxSum');
+}
+
+void main(){
+  int number = 5;
+  List<int> list = [5,4,3,2,1];
+  maxAndMinNumber(number, list);
+}
+```
