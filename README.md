@@ -840,3 +840,19 @@ void main() {
   print(factorial(number));
 }
 ```
+
+40- Write a recursive function to find the sum of all natural numbers from 1 to n.
+```dart
+int sumOfNumber(int number) {
+  if(number ==0){
+    return 0;
+  }else {
+    return number + sumOfNumber(number - 1);
+  }
+}
+
+void main() {
+  int number = 5;
+  print(sumOfNumber(number));
+}
+```
