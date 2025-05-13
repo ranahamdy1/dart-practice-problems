@@ -856,3 +856,21 @@ void main() {
   print(sumOfNumber(number));
 }
 ```
+
+41- // Write a recursive function to find the n-th Fibonacci number. (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...) (كل رقم فيها = مجموع الرقمين اللي قبله)
+```dart
+int fibonacci(int n) {
+  if (n == 0) {
+    return 0;
+  } else if (n == 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+
+void main() {
+  int n = 6;
+  print(fibonacci(n));
+}
+```
