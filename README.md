@@ -684,3 +684,30 @@ void main(){
   print("Welcome, $name");
 }
 ```
+
+33- Given a number N. Print a diamond that has 2N rows.
+```dart
+void diamond(int n){
+  // Upper part (including middle)
+  for (int i = 1; i <= n; i++) {
+    String spaces = ' ' * (n - i);
+    String stars = '*' * (2 * i - 1); //علشان نطبع عدد فردي من النجوم (1, 3, 5, 7...)
+    //2*1 -1 = 2-1 = 1
+    //2*2 -1 = 4-1 = 3
+    //2*3 -1 = 6-1 = 5
+    //2*4 -1 = 8-1 = 7
+    //2*5 -1 = 10-1 = 9
+    print(spaces + stars);
+  }
+  // Lower part
+  for(int i=n-1; i >= 1; i--){
+    String spaces = ' ' * (n - i);
+    String stars = '*' * (2 * i - 1);
+    print(spaces + stars);
+  }
+}
+void main() {
+  int number = 5;
+  diamond(number);
+}
+```
