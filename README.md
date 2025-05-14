@@ -921,3 +921,38 @@ void main() {
   print(twoNumber(list, target));
 }
 ```
+
+44- Write a function that checks if there are two numbers in a sorted list that sum to a target.
+```dart
+List<List<int>> twoNumber(List<int> list, int target) {
+  list.sort();
+  int left = 0;
+  int right = list.length - 1;
+  List<List<int>> result = [];
+
+  while (left < right) {
+    int sum = list[left] + list[right];
+    if (sum == target) {
+      result.add([list[left], list[right]]);
+
+      // تجاهل الأرقام المكررة
+      int currentLeft = list[left];
+      int currentRight = list[right];
+      while (left < right && list[left] == currentLeft) left++;
+      while (left < right && list[right] == currentRight) right--;
+
+    } else if (sum < target) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+  return result;
+}
+
+void main() {
+  List<int> list = [1, 2, 2, 3, 4, 5];
+  int target = 4;
+  print(twoNumber(list, target));
+}
+```
