@@ -874,3 +874,24 @@ void main() {
   print(fibonacci(n));
 }
 ```
+
+42- Write a function that checks if a list is a palindrome using two pointers. (A palindrome list is one that reads the same forward and backward)
+```dart
+bool palindrome(List<int> list) {
+  int left = 0;
+  int right = list.length - 1;
+  while(left<right) {
+    if(list[left] != list[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+}
+
+void main() {
+  List<int> list = [1, 2, 3, 2, 1];
+  print(palindrome(list));
+}
+```
