@@ -895,3 +895,29 @@ void main() {
   print(palindrome(list));
 }
 ```
+
+43- Write a function that checks if there are two numbers in a sorted list that sum to a target.
+```dart
+bool twoNumber(List<int> list, int target) {
+  list.sort();
+  int left = 0;
+  int right = list.length - 1;
+  while(left < right) {
+    int sum = list[left] + list[right];
+    if (sum == target) {
+      return true;
+    }else if(sum < target) {
+      left++;
+    }else{
+      right--;
+    }
+  }
+  return false;
+}
+
+void main() {
+  List<int> list = [1, 2, 3, 4, 5];
+  int target = 9;
+  print(twoNumber(list, target));
+}
+```
