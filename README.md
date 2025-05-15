@@ -1011,8 +1011,28 @@ void main() {
   print(indexInList(numbers, target));
 }
 ```
+48- Write a Dart function that returns a list of all pairs of numbers in the input list that sum up to a given target.
+```dart
+List<List<int>> pairNumber(List<int> list, int target) {
+  List<List<int>> result = [];
+  for(int i = 0; i < list.length; i++) {
+    for(int j = i + 1; j < list.length; j++) {
+      if(list[i] + list[j] == target) {
+        result.add([list[i], list[j]]);
+      }
+    }
+  }
+  return result;
+}
 
-48- Write a Dart function that counts how many even numbers are in a list.
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+  int target = 3;
+  print(pairNumber(numbers, target));
+}
+```
+
+49- Write a Dart function that counts how many even numbers are in a list.
 ```dart
 int numberOfEven(List<int> numbers) {
   int count = 0;
