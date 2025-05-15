@@ -956,3 +956,19 @@ void main() {
   print(twoNumber(list, target));
 }
 ```
+
+45- // You are given a list of integers where every element appears twice except one element, which appears only once.
+```dart
+int uniqueElement(List<int> list) {
+  int unique = 0;
+  for (int i = 0; i < list.length; i++) {
+    unique ^= list[i]; // XOR operation
+  }
+  return unique;
+}
+
+void main() {
+  List<int> list = [1, 2, 3, 4, 5, 1, 2, 3, 4];
+  print(uniqueElement(list));
+}
+```
