@@ -993,3 +993,21 @@ void main() {
   print(numberOfPairs(arr, target));
 }
 ```
+
+47- Write a Dart function that returns the index of the first element in a list that is equal to a target number. If the number is not found, return -1.
+```dart
+int indexInList(List<int> list, int target) {
+  for(int i = 0; i < list.length; i++) {
+    if(list[i] == target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+  int target = 3;
+  print(indexInList(numbers, target));
+}
+```
