@@ -972,3 +972,24 @@ void main() {
   print(uniqueElement(list));
 }
 ```
+
+46- Given a list of integers and a target value, count how many pairs (i, j) exist such that i < j and arr[i] + arr[j] == target.
+```dart
+int numberOfPairs(List<int> list, int target) {
+  int count = 0;
+  for(int i= 0; i<list.length ; i++) {
+    for(int j = i+1; j<list.length; j++) {
+      if(list[i] + list[j] == target) {
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+void main() {
+  List<int> arr = [1, 2, 3, 4, 5];
+  int target = 6; // 2 >> [2,4] , [1,5]
+  print(numberOfPairs(arr, target));
+}
+```
