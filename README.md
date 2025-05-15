@@ -957,7 +957,7 @@ void main() {
 }
 ```
 
-45- // You are given a list of integers where every element appears twice except one element, which appears only once.
+45- You are given a list of integers where every element appears twice except one element, which appears only once.
 ```dart
 int uniqueElement(List<int> list) {
   int unique = 0;
