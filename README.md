@@ -1049,3 +1049,27 @@ void main() {
   print(numberOfEven(numbers));
 }
 ```
+
+50- Given a list of integers, return true if there exists a subarray (of at least 2 elements) whose sum is a multiple of k.
+```dart
+bool subarraySum(List<int> numbers, int target) {
+  for(int i = 0; i<numbers.length; i++) {
+    for(int j = i+1; j<numbers.length; j++) {
+      int sum = 0;
+      for(int k = i; k<=j; k++) {
+        sum += numbers[k];
+      }
+      if(sum % target == 0) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+void main() {
+  List<int> numbers = [23, 2, 4, 6, 7];
+  int target = 6;
+  print(subarraySum(numbers, target));
+}
+```
