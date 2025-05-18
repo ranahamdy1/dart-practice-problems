@@ -1110,3 +1110,25 @@ void main() {
   print(sumLargestUniqueNumbers(numbers));
 }
 ```
+
+53- Given a sentence, return the longest word.
+```dart
+String longestWord(String sentence) {
+  String longest = '';
+  List<String> words = sentence.split(RegExp(r'[\s.,!?;:]')); // Split by spaces and punctuation
+  int maxLength = 0;
+
+  for (String word in words) {
+    if (word.isNotEmpty && word.length > maxLength) {
+      longest = word;
+      maxLength = word.length;
+    }
+  }
+  return longest;
+}
+
+void main() {
+  String sentence = "Hello world123 567";
+  print(longestWord(sentence));
+}
+```
