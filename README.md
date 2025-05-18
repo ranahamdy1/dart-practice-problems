@@ -1094,22 +1094,19 @@ void main() {
 
 52- Given a list of numbers (which may contain duplicates), return the sum of the two largest unique numbers.
 ```dart
-int sumLargestUniqueNumbers(List<int>list) {
-  int max =list[0];
-  int secondMax = list[0]+1;
-  for (int i = 0; i < list.length; i++) {
-    if (list[i] > max) {
-      secondMax = max;
-      max = list[i];
-    } else if (list[i] > secondMax && list[i] != max) {
-      secondMax = list[i];
-    }
-  }
-  return max + secondMax;
+int sumLargestUniqueNumbers(List<int> list) {
+  Set<int> uniqueNumbers = list.toSet();
+  List<int> sorted = uniqueNumbers.toList()..sort();
+  int maxNumber = sorted[sorted.length - 1];
+  int secondMaxNumber = sorted[sorted.length - 2];
+
+  if (sorted.length < 2) return -1;
+
+  return maxNumber + secondMaxNumber;
 }
 
 void main() {
-  List<int> numbers = [1, 2, 3, 4 ,8 , 5, 6];
+  List<int> numbers = [1, 2, 3, 4, 8, 5, 6];
   print(sumLargestUniqueNumbers(numbers));
 }
 ```
