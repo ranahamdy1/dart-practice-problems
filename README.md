@@ -1132,3 +1132,35 @@ void main() {
   print(longestWord(sentence));
 }
 ```
+
+54- Find the first non-repeating character in a string. If there is no unique character, return -1.
+```dart
+String uniqueCharacter(String str) {
+  Map<String, int> charCount = {};
+
+  // Count the occurrences of each character
+  for(int i =0; i <str.length; i++) {
+    String char = str[i];
+    if(charCount.containsKey(char)){
+      charCount[char] = charCount[char]! + 1;
+    }else{
+      charCount[char] = 1;
+    }
+  }
+
+  // Find the first unique character
+  for(int i =0; i <str.length; i++) {
+    String char = str[i];
+    if(charCount[char] == 1){
+      return char;
+    }
+  }
+
+    return "-1";
+}
+
+void main() {
+  String str = "leetcode";
+  print(uniqueCharacter(str));
+}
+```
