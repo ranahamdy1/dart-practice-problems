@@ -1168,16 +1168,16 @@ void main() {
 55- You have N friends, and each of them knows his name and salary. You must sort them in decreasing order according to their salaries and if two of them have the same salary, you must sort them according to their names in a lexicographically increasing order.
 ```dart
 void orderAccordingSalary(List<Map<String, dynamic>> friends) {
-  friends.sort((a,b) {
-    if (a['salary'] == b['salary']) {
+  friends.sort((a,b){
+    if(a['salary'] == b['salary']) {
       return a['name'].compareTo(b['name']);
-    } else {
-      return b['salary'].compareTo(a['salary']);
+    }else{
+      return b['salary'].compareTo(a['salary']); //بيرتب الرواتب تنازليًا (من الأكبر للأصغرb>a)
+      //return a['salary'].compareTo(b['salary']); //بيرتب الرواتب تصاعديًا (من الأصغر للأكبر)، a<b<c<d
     }
   });
-
   for(var friend in friends) {
-    print('${friend['name']} ${friend['salary']}');
+    print("${friend['name']}, ${friend['salary']}");
   }
 }
 
