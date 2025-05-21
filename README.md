@@ -1192,3 +1192,28 @@ void main() {
   orderAccordingSalary(friends);
 }
 ```
+
+56- Given a list of strings, find the first element that does not repeat in the list.
+```dart
+void firstElementNotRepeat(List<String> list) {
+  Map<String, int> countMap = {};
+
+  //عدّ عدد مرات تكرار كل عنصر داخل list وتخزينه في countMap.
+  for (String element in list) {
+    countMap[element] = (countMap[element] ?? 0) + 1;
+  }
+
+  for (String element in list) {
+    if (countMap[element] == 1) {
+      print(element);
+      return ;
+    }
+  }
+  print("All elements repeat.");
+}
+
+void main() {
+  List<String> list = ["a", "b", "c", "a", "b", "c", "d", "e"];
+  firstElementNotRepeat(list);
+}
+```
