@@ -1268,3 +1268,24 @@ void main() {
   print(groupAnagrams(strings));
 }
 ```
+
+59- Write a function that takes an integer number of seconds as input and converts it to a string formatted as hours, minutes, and seconds (HH:MM:SS). The requirements are:
+
+Each part (hours, minutes, and seconds) must be represented as a two-digit number (for example, "07:04:09").
+
+The number of hours can exceed 24.
+```dart
+void formattedTime(int second) {
+  int hours = second ~/ 3600;
+  int minutes = (second % 3600) ~/ 60;
+  int seconds = second % 60;
+
+  String formattedTime = '${hours.toString().padLeft(2, '0')}:${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
+  print(formattedTime);
+}
+
+void main() {
+  int second = 3661;
+  formattedTime(second);
+}
+```
