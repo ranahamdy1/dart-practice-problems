@@ -1245,3 +1245,26 @@ void main() {
   strongPassword(password);
 }
 ```
+
+58- Given a list of strings, group the strings that are anagrams of each other.
+```dart
+List<List<String>> groupAnagrams(List<String> words) {
+  Map<String, List<String>> map = {};
+  for(var word in words) {
+    List<String> sorted = word.split('')..sort();
+    String key = sorted.join();
+
+    if (map.containsKey(key)) {
+      map[key]!.add(word);
+    } else {
+      map[key] = [word];
+    }
+  }
+  return map.values.toList();
+}
+
+void main() {
+  List<String> strings = ["eat", "tea", "tan", "ate", "nat", "bat"];
+  print(groupAnagrams(strings));
+}
+```
