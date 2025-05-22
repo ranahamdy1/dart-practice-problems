@@ -1217,3 +1217,31 @@ void main() {
   firstElementNotRepeat(list);
 }
 ```
+
+57- Write a function to check if a password is strong. A strong password must:
+
+Be at least 8 characters long
+
+Contain at least one uppercase letter
+
+Contain at least one lowercase letter
+
+Contain at least one digit
+
+Contain at least one special character (e.g., !@#\$%^&*)
+
+```dart
+void strongPassword(String password) {
+      password.contains(RegExp(r'[A-Z]')) &&
+      password.contains(RegExp(r'[a-z]')) &&
+      password.contains(RegExp(r'[0-9]')) &&
+      password.contains(RegExp(r'[!@#\$%^&*]')) &&
+      password.length >= 8
+      ? print("true") : print("false");
+}
+
+void main() {
+  String password = "Password123!";
+  strongPassword(password);
+}
+```
